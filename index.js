@@ -103,7 +103,7 @@ app.use("/",userRouter);
 
 // i used this middleware to go any random route and then show error
 app.use((req, res, next) => {
-  next(new ExpressError("Page not Found!", 404));
+  next(new ExpressError(404,"Page not Found!"));
 });
 
 // Error Handler Middleware
